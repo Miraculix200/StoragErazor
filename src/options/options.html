@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+
+<style>
+
+body
+{
+   font-family: 'proxima-nova', 'helveticaneue-light', 'helvetica', sans-serif; 
+}
+
+.caption
+{
+  font-size: 24px;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: absolute;
+  top: 0px;
+  height: 40px;
+  border-bottom: 1px dotted black;
+  letter-spacing: 3px;
+  color: #b1b1b3;
+}
+
+#page-container
+{
+  position: relative;
+  width: 700px;
+  height: 100%;
+  padding: 16px;
+  margin: 0 auto;
+  display: none;
+}
+
+.form-container
+{
+    padding: 16px;
+    border: 1px dotted black;
+    width: 100%;
+    background-color: #f9f9fa;
+    position: absolute;
+    top: 80px;
+    border: 1px dotted black;
+    border-radius: 8px;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+label {
+  padding-left: 16px;
+  font-size: 24px;
+}
+
+input, label {
+  cursor: pointer;
+}
+
+.description
+{
+  font-size: 20px;
+  padding-left: 20px;
+  color: #b1b1b3;
+}
+
+</style>
+
+
+</head>
+<body>
+
+  <div id="page-container">
+    <div class="caption">Settings</div>
+    <div class="form-container">
+      <form id="ce-form">
+        <table>
+          <tr>
+            <td>
+               <input type="checkbox" id="cache">
+            </td>
+            <td>
+              <label for="cache">
+                Clear Cache
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td class="description">
+              Clear the browser cache on restart
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+               <input type="checkbox" id="localstorage">
+            </td>
+            <td>
+              <label for="localstorage">
+                Clear Local Storage
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td class="description">
+              Clear data stored in local storage on restart
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+               <input type="checkbox" id="indexeddb">
+            </td>
+            <td>
+              <label for="indexeddb">
+                Clear IndexedDB
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="description">
+              Clear data stored in IndexedDB on restart
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+  <script src="options.js"></script>
+  </body>
+</html>

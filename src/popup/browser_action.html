@@ -1,0 +1,136 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>StoragErazor</title>
+<style>
+
+
+body
+{
+	background-color: #f9f9fa;
+}
+
+#container
+{
+/*	height: 260px;*/
+
+}
+
+.menu-item:hover
+{
+	background-color: rgb(150,150,200);
+}
+
+.navigation {
+/*  width: 150px;*/
+
+	padding-bottom: 40px;
+  background-color: #b1b1b3 ;
+
+}
+
+.mainmenu, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+
+}
+
+.mainmenu a {
+  display: block;
+  background-color: #737373;
+  text-decoration: none;
+  padding: 10px;
+  color: #ededf0;
+}
+
+.submenu a {
+  background-color: #b1b1b3 ;
+  transition-duration: 0.25s;
+  color: #000;
+      	padding-left: 30px;
+	padding-right: 30px;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+  background-color: #45a1ff;
+  color: #f9f9fa;
+}
+
+#id-settings:hover, .menu-link a:hover {
+	text-decoration: underline;
+}
+
+
+.mainmenu li:hover .submenu {
+  display: block;
+/*  max-height: 200px;*/
+  transition-duration: 0.25s;
+}
+
+.mainmenu li .submenu.open {
+  display: block;
+
+    list-style: none;
+}
+
+#tools {
+	cursor: default;
+}
+
+.submenu {
+  overflow: hidden;
+ /* max-height: 0;*/
+}
+
+
+.popup-header
+{
+	font-size: 16px;
+}
+
+.header-host-value
+{
+	font-weight: 600;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<div id="container">
+
+
+
+	<nav class="navigation">
+	  <ul class="mainmenu" id="menu-list">
+
+
+
+	    <li class="tools-menu" id="tools-menu">
+	      <a id="tools" href="#">StoragErazor</a>
+	      <ul class="submenu open">
+		    <li><a title="Erase local storage/indexedDB/cache" id="id-all" href="#">Erase All</a></li>
+		    <li><a title="Erase local storage now" id="id-local" href="#">Erase DOM Storage</a></li>
+		    <li><a title="Erase indexedDB now" id="id-indexed" href="#">Erase IndexedDB</a></li>
+		    <li><a title="Erase cache now" id="id-cache" href="#">Erase Cache</a></li>
+		    <p>
+		    <li><a title="Open settings page" id="id-settings" href="#">Settings</a></li>
+	      </ul>
+		    
+	    </li>
+	    
+
+
+
+	  </ul>
+	</nav>
+</div>
+<script src="browser_action.js"></script>
+</body>
+</html>

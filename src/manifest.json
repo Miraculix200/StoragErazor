@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+  "name": "StoragErazor",
+  "version": "1.0",
+  "description": "Enhance privacy by automatically deleting DOM storage/IndexedDB super-cookies",
+  "homepage_url": "https://addons.mozilla.org/en-US/firefox/user/miraculix200/",
+  "icons": {
+    "48": "icons/recycle.png"
+  },  
+  "applications": {
+    "gecko": {
+      "id": "StoragErazor@example.org",
+      "strict_min_version": "57.0b3"
+    }
+  },
+
+  "permissions": [
+    "storage",
+      "notifications",
+    
+      "browsingData"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "options_ui": {
+    "page": "options/options.html"
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+      "16": "icons/recycle.png",
+      "32": "icons/recycle.png"
+    },
+    "default_title": "StorageRazor",
+    "default_popup": "popup/browser_action.html" 
+  }
+
+
+}
